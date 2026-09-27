@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "rcg",
+	"version": "${version}",
+	"name": "RandomChallenging",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rcg/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "io.f1uffysn0w.RandomChallenging",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "io.f1uffysn0w.client.RandomChallengingClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "io.f1uffysn0w.client.RandomChallengingDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"randomchallenging.mixins.json",
+		{
+			"config": "randomchanllenging.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
