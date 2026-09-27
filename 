@@ -1,0 +1,58 @@
+warning: in the working copy of 'src/client/kotlin/io/f1uffysn0w/client/RandomChallengingClient.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main/kotlin/io/f1uffysn0w/RandomChallenging.kt', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/client/kotlin/io/f1uffysn0w/client/RandomChallengingClient.kt b/src/client/kotlin/io/f1uffysn0w/client/RandomChallengingClient.kt[m
+[1mindex c07e764..e606178 100644[m
+[1m--- a/src/client/kotlin/io/f1uffysn0w/client/RandomChallengingClient.kt[m
+[1m+++ b/src/client/kotlin/io/f1uffysn0w/client/RandomChallengingClient.kt[m
+[36m@@ -1,9 +1,11 @@[m
+ package io.f1uffysn0w.client[m
+ [m
+[32m+[m[32mimport io.f1uffysn0w.client.commands.CommandManager[m
+ import net.fabricmc.api.ClientModInitializer[m
+ [m
+ object RandomChallengingClient : ClientModInitializer {[m
+ 	override fun onInitializeClient() {[m
+[31m-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.[m
+[32m+[m		[32m// Init Commands[m
+[32m+[m		[32mCommandManager()[m
+ 	}[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/client/kotlin/io/f1uffysn0w/client/commands/impl/HelloCommand.kt b/src/client/kotlin/io/f1uffysn0w/client/commands/impl/HelloCommand.kt[m
+[1mindex 95a9d78..6098dde 100644[m
+[1m--- a/src/client/kotlin/io/f1uffysn0w/client/commands/impl/HelloCommand.kt[m
+[1m+++ b/src/client/kotlin/io/f1uffysn0w/client/commands/impl/HelloCommand.kt[m
+[36m@@ -1,6 +1,7 @@[m
+ ﻿package io.f1uffysn0w.client.commands.impl[m
+ [m
+ import com.mojang.brigadier.builder.LiteralArgumentBuilder[m
+[32m+[m[32mimport io.f1uffysn0w.client.commands.Feedback[m
+ import io.f1uffysn0w.client.commands.CommandBase[m
+ import net.minecraft.commands.CommandSourceStack[m
+ import net.minecraft.commands.Commands[m
+[36m@@ -10,7 +11,7 @@[m [mclass HelloCommand : CommandBase {[m
+     override fun attach(root: LiteralArgumentBuilder<CommandSourceStack>) {[m
+         root.then(Commands.literal("hello")[m
+             .executes {[m
+[31m-[m
+[32m+[m[32m                Feedback.ok(it.source, "Hello Command")[m
+                 1[m
+             })[m
+     }[m
+[1mdiff --git a/src/main/kotlin/io/f1uffysn0w/RandomChallenging.kt b/src/main/kotlin/io/f1uffysn0w/RandomChallenging.kt[m
+[1mindex 7cb9cb2..d4f7b4a 100644[m
+[1m--- a/src/main/kotlin/io/f1uffysn0w/RandomChallenging.kt[m
+[1m+++ b/src/main/kotlin/io/f1uffysn0w/RandomChallenging.kt[m
+[36m@@ -10,11 +10,7 @@[m [mobject RandomChallenging : ModInitializer {[m
+ 	private val LOGGER = LoggerFactory.getLogger(MOD_ID)[m
+ [m
+ 	override fun onInitialize() {[m
+[31m-		// This code runs as soon as Minecraft is in a mod-load-ready state.[m
+[31m-		// However, some things (like resources) may still be uninitialized.[m
+[31m-		// Proceed with mild caution.[m
+[31m-[m
+[31m-		LOGGER.info("Hello Fabric world!")[m
+[32m+[m		[32mLOGGER.info("RandomChallenging initialized!")[m
+ 	}[m
+ [m
+ 	fun id(path: String): Identifier[m
