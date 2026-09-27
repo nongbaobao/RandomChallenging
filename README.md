@@ -1,7 +1,7 @@
 # 随机挑战
 > ***致我逝去的童年***  
 >
-复刻**nongbaobao**和**Kendieer**大概2021年底的数据包，我想把它做成mod版本  
+一个Fabric版本的mod，主要复刻**nongbaobao**和**Kendieer**大概2021年底制作的随机挑战数据包  
 [最后一次更新 21/10/06 密码sjtz 游戏版本1.16.x]("https://imherry.lanzouq.com/iQofNv18wwj")
 
 ## 大致游戏玩法
