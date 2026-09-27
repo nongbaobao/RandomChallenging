@@ -2,7 +2,7 @@
 > ***致我逝去的童年***  
 >
 一个Fabric版本的mod，主要复刻**nongbaobao**和**Kendieer**大概2021年底制作的随机挑战数据包  
-[最后一次更新 21/10/06 密码sjtz 游戏版本1.16.x]("https://imherry.lanzouq.com/iQofNv18wwj")
+[最后一次更新 21/10/06 密码sjtz 游戏版本1.16.x](https://imherry.lanzouq.com/iQofNv18wwj)
 
 ## 大致游戏玩法
 在有限的时间内，根据系统给予的随机物品去更好的生存，完成自己指定的随机目标
